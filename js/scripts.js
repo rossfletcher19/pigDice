@@ -22,7 +22,6 @@ Player.prototype.rollone = function() {
   if (this.roll === 1) {
   this.tempscore = 0;
   alert("Sorry " + this.playerName + ", you rolled a 1! Your turn is over!")
-  // this.changeturn();
   } else {
   this.tempscore += this.roll;
   }
@@ -32,16 +31,17 @@ Player.prototype.rollone = function() {
 Player.prototype.hold = function () {
   this.totalscore += this.tempscore;
   this.tempscore = 0;
-  // this.changeturn();
   alert(this.playerName + ", your turn is over, pass the mouse!");
 }
 
+// Check for winner
 Player.prototype.winnerCheck = function () {
   if (this.totalscore >= 100) {
     alert(this.playerName + " You are the winner!");
   }
 }
 
+// Newgame button
 Player.prototype.newGame = function () {
   //debugger;
   this.roll = 0;
@@ -94,9 +94,7 @@ $(document).ready(function() {
   });
 
 
-
-
-
+// Player Buttons
   $("button#player1-roll").click(function(event){
    player1.roll = rolldice();
    $("#die-roll-1").text(player1.roll);

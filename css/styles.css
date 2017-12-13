@@ -1,5 +1,6 @@
 body {
-  background-color: lightgrey;
+  background-image: url(../img/pigBR.jpg);
+  background-size: 100% 100%;
 }
 
 .jumbotron {
