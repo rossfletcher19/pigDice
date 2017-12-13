@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>PigDice</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Lets Play Pig Dice!!</h1>
+      </div>
+      <div class="row rulesRow">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h4>Rules:</h4>
+            </div>
+            <div class="panel-body">
+              <div id="rulesDefinitions">
+                <p>This is a simple dice game where two players have the chance to roll the dice to try and achieve a score of 100.</p>
+                <p>The rules of the game are:</p>
+                <ul>
+                  <li>When the player rolls a 2 - 6, the dice score is added to their turn total and they can continue to play.</li>
+                  <li>When a player rolls a 1, their total score reverts to 0 and it becomes the next player's turn.</li>
+                  <li>When the player chooses to "hold"(pass their turn), their turn total is added to their total score, and it becomes the next player's turn.</li>
+                  <li>The player who first scores 100 or more points wins the game.</li>
+                </ul>
+                <p>Try your luck!!!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="signInRow container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h4>Please Sign in for a game!!</h4>
+              </div>
+              <div class="panel-body">
+                <form id="player-1">
+                  <div class="form-group">
+                    <label for="player1Name">Enter Your Name</label>
+                    <input type="text" required class="player1Name form-control" placeholder="Player1">
+                  </div>
+                </form>
+                <form class="player-2">
+                  <div class="form-group">
+                    <label for="player2Name">Enter Your Name</label>
+                    <input type="text" required class="player2Name form-control" placeholder="Player2">
+                  </div>
+                </form>
+                  <button id="letsPlay" class="btn btn-success">Let's Play!!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="playerConsole container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h4>Player 1: <span id="player1Name"></span></h4>
+              </div>
+              <div class="panel-body">
+                <button id="player1-roll" class="btn-success btn">Roll</button>
+                <button id="player1-hold" class="btn-success btn">Hold</button>
+                <h2>Dice Roll: <span id="die-roll-1"></span></h2>
+                <p>Round Total: <span id="round-total-1"></span></p>
+                <p>Total Score: <span id="total-score-1"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h4>Player 2: <span id="player2Name"></span></h4>
+              </div>
+              <div class="panel-body">
+                <button id="player2-roll" class="btn-success btn">Roll</button>
+                <button id="player2-hold" class="btn-success btn">Hold</button>
+                <h2>Dice Roll: <span id="die-roll-2"></span></h2>
+                <p>Round Total: <span id="round-total-2"></span></p>
+                <p>Total Score: <span id="total-score-2"></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-primary">
+              <div class="panel-body">
+                <button id="new-game" class="btn-success btn">NEW GAME</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
