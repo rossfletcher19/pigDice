@@ -8,13 +8,14 @@ var rolldice = function() {
   return Math.floor(6*Math.random())+1;
 }
 
-var rolldice = function() {
+var rolldice2 = function() {
   return Math.floor(6*Math.random())+1;
 }
 
 // player constructer
 function Player(turn) {
   this.roll = 0;
+  this.roll2 = 0;
   this.tempscore = 0;
   this.totalscore = 0;
   this.turn = turn;
@@ -23,11 +24,11 @@ function Player(turn) {
 
  // number 1 checker
 Player.prototype.rollone = function() {
-  if (this.roll === 1) {
+  if (this.roll === 1 || this.roll2 === 1) {
   this.tempscore = 0;
   alert("Sorry " + this.playerName + ", you rolled a 1! Your turn is over!")
   } else {
-  this.tempscore += this.roll;
+  this.tempscore += this.roll + this.roll2;
   }
 }
 
@@ -49,6 +50,7 @@ Player.prototype.winnerCheck = function () {
 Player.prototype.newGame = function () {
   //debugger;
   this.roll = 0;
+  this.roll2 = 0;
   this.tempscore = 0;
   this.totalscore = 0;
   this.playerName ="";
@@ -101,14 +103,18 @@ $(document).ready(function() {
 // Player Buttons
   $("button#player1-roll").click(function(event){
    player1.roll = rolldice();
+   player1.roll2 = rolldice2();
    $("#die-roll-1").text(player1.roll);
+   $("#die-roll-1a").text(player1.roll2);
    player1.rollone();
    $("#round-total-1").text(player1.tempscore);
   });
 
   $("button#player2-roll").click(function(event){
    player2.roll = rolldice();
+   player2.roll2 = rolldice2();
    $("#die-roll-2").text(player2.roll);
+   $("#die-roll-2a").text(player2.roll2);
    player2.rollone();
    $("#round-total-2").text(player2.tempscore);
   });
@@ -118,6 +124,7 @@ $(document).ready(function() {
     $("#total-score-1").text(player1.totalscore);
     $("#round-total-1").empty();
     $("#die-roll-1").empty();
+    $("#die-roll-1a").empty();
     player1.winnerCheck();
   });
 
@@ -126,6 +133,7 @@ $(document).ready(function() {
     $("#total-score-2").text(player2.totalscore);
     $("#round-total-2").empty();
     $("#die-roll-2").empty();
+    $("#die-roll-2a").empty();
     player2.winnerCheck();
   });
 });
