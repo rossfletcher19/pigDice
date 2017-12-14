@@ -8,6 +8,19 @@ var rolldice = function() {
   return Math.floor(6*Math.random())+1;
 }
 
+// var playerCheck = function() {
+//
+//   if ($(".player2Name").val() === "") {
+//     console.log("No player2, playing aiPig");
+//   }
+//
+// }
+//
+// var aiPig = function() {
+//
+//
+// }
+
 // player constructer
 function Player(turn) {
   this.roll = 0;
