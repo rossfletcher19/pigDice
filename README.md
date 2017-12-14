@@ -13,8 +13,8 @@ _A web app allowing two players to engage in a friendly game of Pig Dice._
 |  Behavior |  Input | Output  |
 |---|---|---|
 |  Accepts user name |  "Ross" | "Ross"  |
-|  Shows game page |  clicks "start" | shows game page  |
-|  random # can be generated | click "roll"  | random # between 1 and 6  |
+|  Shows game console when user clicks "Lets Play" |  clicks "start" | shows game page  |
+|  random #s can be generated | click "roll"  | random # between 1 and 6  |
 |  random # generated can be added to players total |   |   |
 |  hold function can be called |  click "hold" | "totals score, prompts turn change"  |
 |   |   |   |
