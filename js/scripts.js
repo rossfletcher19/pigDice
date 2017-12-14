@@ -8,6 +8,10 @@ var rolldice = function() {
   return Math.floor(6*Math.random())+1;
 }
 
+var rolldice = function() {
+  return Math.floor(6*Math.random())+1;
+}
+
 // player constructer
 function Player(turn) {
   this.roll = 0;
