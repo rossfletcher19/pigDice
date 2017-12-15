@@ -51,6 +51,7 @@
                       <input type="text" required class="player1Name form-control" placeholder="Player1">
                     </div>
                   </form>
+                  <div class="center-block"><i><p>Leave Player2 name blank to challenge aiPig</p></i></div>
                   <form class="player-2">
                     <div class="form-group">
                       <label for="player2Name">Enter Your Name</label>
@@ -85,12 +86,17 @@
                 <div class="panel-heading">
                   <h4>Player 2: <span id="player2Name"></span></h4>
                 </div>
-                <div class="panel-body">
+                <div class="panel-body player2Console">
                   <button id="player2-roll" class="btn-success btn">Roll</button>
                   <button id="player2-hold" class="btn-success btn">Hold</button>
                   <h2>Dice Roll: <span id="die-roll-2"></span></h2>
                   <p>Round Total: <span id="round-total-2"></span></p>
                   <p>Total Score: <span id="total-score-2"></span></p>
+                </div>
+                <div class="panel-body aiPig">
+                  <h2>Dice Roll: <span id="die-roll-3"></span></h2>
+                  <p>Round Total: <span id="round-total-3"></span></p>
+                  <p>Total Score: <span id="total-score-3"></span></p>
                 </div>
               </div>
             </div>

@@ -23,7 +23,24 @@ padding-bottom: 0px;
   display: none;
 }
 
+.aiPig {
+  display: none;
+  background-image: url(../img/aiPig.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 200px 200px;
+  background-color: #fffec6;
+  height: 185px;
+}
+
 #new-game {
   display: block;
   margin: 0 auto;
+}
+
+.center-block p {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  color: red;
 }
