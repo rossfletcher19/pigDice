@@ -26,7 +26,7 @@ _A web app allowing two players to engage in a friendly game of Pig Dice._
 
 * _Download or clone from GitHub @ [PigDice](https://github.com/rossfletcher19/pigDice "pigDice")_
 * _Open with Atom or open index.html in a browser_
-* _View at [PigDice](rossfletcher19.github.io/pigDice) "pigDice")
+* _View at [PigDice]( rossfletcher19.github.io/pigDice ) "pigDice")
 
 
 ## Known Bugs
